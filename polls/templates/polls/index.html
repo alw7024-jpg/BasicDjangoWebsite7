@@ -1,0 +1,32 @@
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+
+
+<style>
+    .center {text-align: center;}
+    /* h1 {color: blue;} */
+</style>
+<div class="center">
+    <h1>test header</h1>
+    <button class="center" id="test_btn" onclick="test_function()">Test</button>
+    <p id="test_message">Test message</p>
+    <a class="center" href="{% url 'polls:faq' %}">FAQ</a>
+
+
+
+<script src="{% static 'polls/main.js' %}"> </script>
+</div>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+

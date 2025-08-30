@@ -1,0 +1,38 @@
+@media screen and (max-width: 330px) {
+    h1 { 
+        /* font-size: 40px; */
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 330px) {
+    h1 { 
+        /* font-size: 40px; */
+        color: purple;
+    }
+}
+
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/background.png") no-repeat;
+}
+
+.center {
+    text-align:center; 
+}
+
+#testBtn {
+    color: red;
+ }
+
+/* h1 { 
+    color: red;
+     font-size: 50px; 
+} */
+
+p {   
+    color: red;
+}
